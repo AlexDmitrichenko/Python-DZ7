@@ -8,24 +8,36 @@
 # Ввод: пара-ра-рам рам-пам-папам па-ра-па-дам    Вывод: Парам пам-пам
 
 stryng = 'пара-ра-рам рам-пам-папам па-ра-па-дам'
+text = stryng.split()
+listRes = []
+for word in text:
+    sumVowels = 0
+    for i in word:
+        if i in 'аеиоуыэюя':
+            sumVowels += 1
+    listRes.append(sumVowels)
+    
+def comparison(listRes):
+    for i in range (len(listRes)-1):
+        if listRes[len(listRes)] == listRes[i]:
+            return listRes
+print(comparison(listRes))
 
-def searchVowels(str):
-    str = stryng.split()
-    listRes = []
-    for word in str:
-        sumVowels = 0
-        for i in word:
-            if i in 'аеиоуыэюя': 
-                sumVowels += 1
-        listRes.append(searchVowels)               
-    return len(listRes) == listRes.count(listRes[0])
+# def searchVowels(str):
+#     str = stryng.split()
+#     listRes = []
+#     for word in str:
+#         sumVowels = 0
+#         for i in word:
+#             if i in 'аеиоуыэюя': 
+#                 sumVowels += 1
+#         listRes.append(searchVowels)               
+#     return len(listRes) == listRes.count(listRes[0])
 
-if searchVowels(stryng):
-    print('Парам пам-пам')
-else:
-    print('Пам парам')
-
-
+# if searchVowels(stryng):
+#     print('Парам пам-пам')
+# else:
+#     print('Пам парам')
 
 
 
