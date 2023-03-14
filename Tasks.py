@@ -7,9 +7,28 @@
 # с ритмом все не в порядке 
 # Ввод: пара-ра-рам рам-пам-папам па-ра-па-дам    Вывод: Парам пам-пам
 
-string = 'пара-ра-рам рам-пам-папам па-ра-па-дам'
-myString = list(string.split()) 
-print(myString)
+stryng = 'пара-ра-рам рам-пам-папам па-ра-па-дам'
+
+def searchVowels(str):
+    str = stryng.split()
+    listRes = []
+    for word in str:
+        sumVowels = 0
+        for i in word:
+            if i in 'аеиоуыэюя': 
+                sumVowels += 1
+        listRes.append(searchVowels)               
+    return len(listRes) == listRes.count(listRes[0])
+
+if searchVowels(stryng):
+    print('Парам пам-пам')
+else:
+    print('Пам парам')
+
+
+
+
+
 # myDict = {1:'а', 2:'е', 3:'о'}
 # for i, v in myDict.items():
 #     if v in myString:
@@ -17,5 +36,4 @@ print(myString)
 #     if myString.count(item) == 'а':
 #         myList.append(myString.count(item) == 'а')
 # print(myList)
-
 
