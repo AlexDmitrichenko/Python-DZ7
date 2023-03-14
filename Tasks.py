@@ -10,10 +10,12 @@
 string = 'пара-ра-рам рам-пам-папам па-ра-па-дам'
 myString = list(string.split()) 
 print(myString)
-myList = []
-for item in myString:
-    if myString.count(item) == 'а':
-        myList.append(myString.count(item) == 'а')
-print(myList)
+# myDict = {1:'а', 2:'е', 3:'о'}
+# for i, v in myDict.items():
+#     if v in myString:
+#         print(v)
+#     if myString.count(item) == 'а':
+#         myList.append(myString.count(item) == 'а')
+# print(myList)
 
 
