@@ -38,17 +38,10 @@
 # 6 12 18 24 30 36
 
 # def printOperationTable(operation, numRows=6, numColumns=6):
-#     a = [[operation(i,j) for j in range(1,numColumns+1)] for i in range(1,numRows+1)]
-#     print(a) 
-#     for i in a:
-#         print(*[f"{x:>3}" for x in i])
+#     for i in range(1, numRows + 1):
+#         a = []
+#         for j in range(1, numColumns + 1):
+#             a.append(str(operation(i, j)))
+#         print(''.join(f'{e:<4}' for e in a))
 
-# printOperationTable (lambda x, y: x * y)
-# def print_operation_table(operation, num_rows=9, num_columns=9):
-#     for i in range(1, num_rows + 1):
-#         answer = []
-#         for j in range(1, num_columns + 1):
-#             answer.append(str(operation(i, j)))
-#         print(''.join(f'{e:<4}' for e in answer))
-
-# print_operation_table(lambda x, y: x * y)
+# printOperationTable(lambda x, y: x * y)
