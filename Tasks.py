@@ -8,8 +8,10 @@
 # Ввод: пара-ра-рам рам-пам-папам па-ра-па-дам    Вывод: Парам пам-пам
 
 stryng = 'пара-ра-рам рам-пам-папам па-ра-па-дам'
+
 text = stryng.split()
 listRes = []
+
 for word in text:
     sumVowels = 0
     for i in word:
@@ -17,35 +19,6 @@ for word in text:
             sumVowels += 1
     listRes.append(sumVowels)
     
-def comparison(listRes):
-    for i in range (len(listRes)-1):
-        if listRes[len(listRes)] == listRes[i]:
-            return listRes
-print(comparison(listRes))
+print(f'Парам пам-пам' if len(listRes) == listRes.count(listRes[0]) else 'Пам парам')
 
-# def searchVowels(str):
-#     str = stryng.split()
-#     listRes = []
-#     for word in str:
-#         sumVowels = 0
-#         for i in word:
-#             if i in 'аеиоуыэюя': 
-#                 sumVowels += 1
-#         listRes.append(searchVowels)               
-#     return len(listRes) == listRes.count(listRes[0])
-
-# if searchVowels(stryng):
-#     print('Парам пам-пам')
-# else:
-#     print('Пам парам')
-
-
-
-# myDict = {1:'а', 2:'е', 3:'о'}
-# for i, v in myDict.items():
-#     if v in myString:
-#         print(v)
-#     if myString.count(item) == 'а':
-#         myList.append(myString.count(item) == 'а')
-# print(myList)
 
